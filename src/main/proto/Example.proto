@@ -1,0 +1,17 @@
+syntax ="proto3";
+//option java_multiple_files = true;
+package com.entities;
+
+service Greeter {
+
+
+  rpc Hello (request) returns (response);
+}
+message  request{
+
+  string name=1;
+}
+
+message response{
+  string name=1;
+}

@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+
+def grpcVersion = '1.44.0' // CURRENT_GRPC_VERSION
+def protocVersion = '3.19.2'
+
+dependencies {
+    implementation "io.grpc:grpc-alts:${grpcVersion}"
+    compileOnly "org.apache.tomcat:annotations-api:6.0.53"
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+
+
+}
+
+test {
+    useJUnitPlatform()
+}
